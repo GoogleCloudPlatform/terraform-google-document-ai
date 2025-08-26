@@ -14,7 +14,12 @@
  * limitations under the License.
  */
 
-output "bucket_name" {
-  description = "Name of the bucket"
-  value       = google_storage_bucket.main.name
+output "processor_id" {
+  value       = google_document_ai_processor.processor.id
+  description = "The full Document AI processor path ID"
+}
+
+output "processor_name" {
+  value       = google_document_ai_processor.processor.name
+  description = "The resource name of the processor."
 }

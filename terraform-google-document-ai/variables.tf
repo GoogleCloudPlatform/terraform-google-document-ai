@@ -15,11 +15,28 @@
  */
 
 variable "project_id" {
-  description = "The project ID to deploy to"
+  description = "The ID of the project in which the resource belongs. If it is not provided, the provider project is used."
   type        = string
 }
 
-variable "bucket_name" {
-  description = "The name of the bucket to create"
+variable "processor_display_name" {
+  description = "The name of the document ai processor. Must be unique"
   type        = string
+}
+
+variable "processor_type" {
+  description = "Document AI processor type, refer: https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations.processorTypes#resource:-processortype"
+  type        = string
+}
+
+variable "location" {
+  description = "Document AI location, see https://cloud.google.com/document-ai/docs/regions"
+  type        = string
+}
+
+# Optional variable
+variable "kms_key_name" {
+  description = "The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management."
+  type        = string
+  default     = ""
 }

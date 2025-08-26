@@ -14,7 +14,12 @@
  * limitations under the License.
  */
 
-output "bucket_name" {
-  description = "The name of the bucket."
-  value       = module.document_ai.bucket_name
+output "processor_id" {
+  value       = module.document_ai.processor_id
+  description = "The full Document AI processor path ID"
+}
+
+output "processor_name" {
+  value       = module.document_ai.processor_name
+  description = "The resource name of the processor."
 }

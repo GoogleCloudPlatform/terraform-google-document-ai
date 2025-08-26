@@ -7,14 +7,14 @@ This example illustrates how to use the `document-ai` module.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| bucket\_name | The name of the bucket to create. | `string` | n/a | yes |
-| project\_id | The ID of the project in which to provision resources. | `string` | n/a | yes |
+| project\_id | The ID of the project in which the resource belongs. If it is not provided, the provider project is used. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| bucket\_name | The name of the bucket. |
+| processor\_id | The full Document AI processor path ID |
+| processor\_name | The resource name of the processor. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

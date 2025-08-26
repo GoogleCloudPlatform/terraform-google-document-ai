@@ -52,14 +52,18 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| bucket\_name | The name of the bucket to create | `string` | n/a | yes |
-| project\_id | The project ID to deploy to | `string` | n/a | yes |
+| kms\_key\_name | The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management. | `string` | `""` | no |
+| location | Document AI location, see https://cloud.google.com/document-ai/docs/regions | `string` | n/a | yes |
+| processor\_display\_name | The name of the document ai processor. Must be unique | `string` | n/a | yes |
+| processor\_type | Document AI processor type, refer: https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations.processorTypes#resource:-processortype | `string` | n/a | yes |
+| project\_id | The ID of the project in which the resource belongs. If it is not provided, the provider project is used. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| bucket\_name | Name of the bucket |
+| processor\_id | The full Document AI processor path ID |
+| processor\_name | The resource name of the processor. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

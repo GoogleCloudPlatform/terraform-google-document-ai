@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-resource "google_storage_bucket" "main" {
-  project  = var.project_id
-  name     = var.bucket_name
-  location = "US"
+resource "google_document_ai_processor" "processor" {
+  location     = var.location
+  project      = var.project_id
+  display_name = var.processor_display_name
+  type         = var.processor_type
+  kms_key_name = var.kms_key_name
 }
