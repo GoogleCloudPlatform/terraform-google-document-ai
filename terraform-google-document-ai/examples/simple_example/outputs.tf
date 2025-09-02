@@ -23,3 +23,8 @@ output "processor_name" {
   value       = module.document_ai.processor_name
   description = "The resource name of the processor."
 }
+
+output "project_id" {
+  value       = var.project_id
+  description = "The project ID where the processor was created."
+}

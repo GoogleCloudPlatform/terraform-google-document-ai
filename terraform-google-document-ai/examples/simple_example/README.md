@@ -15,6 +15,7 @@ This example illustrates how to use the `document-ai` module.
 |------|-------------|
 | processor\_id | The full Document AI processor path ID |
 | processor\_name | The resource name of the processor. |
+| project\_id | The project ID where the processor was created. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

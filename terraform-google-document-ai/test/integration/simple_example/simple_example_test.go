@@ -29,6 +29,14 @@ func TestSimpleExample(t *testing.T) {
 	example.DefineVerify(func(assert *assert.Assertions) {
 		example.DefaultVerify(assert)
 
+		processorName := example.GetStringOutput("processor_name")
+		processorID := example.GetStringOutput("processor_id")
+
+		assert.NotEmpty(processorName, "The processor name should not be empty")
+		assert.NotEmpty(processorID, "processor_id output must not be empty")
+
+		assert.Contains(processorID, processorName, "Processor ID should contain the processor name")
+
 		projectID := example.GetStringOutput("project_id")
 		services := gcloud.Run(t, "services list", gcloud.WithCommonArgs([]string{"--project", projectID, "--format", "json"})).Array()
 
