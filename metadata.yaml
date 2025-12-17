@@ -23,6 +23,7 @@ spec:
     title: terraform-google-document-ai
     source:
       repo: sso://ospo-internal/releasing/terraform-google-document-ai/terraform-google-document-ai
+      sourceType: git
     version: 0.0.1
     actuationTool:
       flavor: Terraform
@@ -53,19 +54,27 @@ spec:
         description: "Document AI processor type, refer: https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations.processorTypes#resource:-processortype"
         varType: string
         required: true
-      - name: location
-        description: Document AI location, see https://cloud.google.com/document-ai/docs/regions
+      - name: processor_location
+        description: Document AI location, see https://cloud.google.com/document-ai/docs/regions, possible values eu,us
         varType: string
         required: true
       - name: kms_key_name
         description: The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
         varType: string
         defaultValue: ""
+        connections:
+          - source:
+              source: github.com/terraform-google-modules/terraform-google-kms
+              version: ">= 4.1.0"
+            spec:
+              outputExpr: key_id_list[0]
     outputs:
       - name: processor_id
         description: The full Document AI processor path ID
+        type: string
       - name: processor_name
         description: The resource name of the processor.
+        type: string
   requirements:
     roles:
       - level: Project

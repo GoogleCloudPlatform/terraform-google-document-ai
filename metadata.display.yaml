@@ -23,21 +23,26 @@ spec:
     title: terraform-google-document-ai
     source:
       repo: sso://ospo-internal/releasing/terraform-google-document-ai/terraform-google-document-ai
+      sourceType: git
   ui:
     input:
       variables:
         kms_key_name:
           name: kms_key_name
           title: Kms Key Name
-        location:
-          name: location
-          title: Location
         processor_display_name:
           name: processor_display_name
           title: Processor Display Name
+        processor_location:
+          name: processor_location
+          title: Processor Location
         processor_type:
           name: processor_type
           title: Processor Type
         project_id:
           name: project_id
           title: Project Id
+    runtime:
+      outputs:
+        processor_id:
+          visibility: VISIBILITY_ROOT

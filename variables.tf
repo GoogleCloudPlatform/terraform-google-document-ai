@@ -29,8 +29,8 @@ variable "processor_type" {
   type        = string
 }
 
-variable "location" {
-  description = "Document AI location, see https://cloud.google.com/document-ai/docs/regions"
+variable "processor_location" {
+  description = "Document AI location, see https://cloud.google.com/document-ai/docs/regions, possible values eu,us"
   type        = string
 }
 

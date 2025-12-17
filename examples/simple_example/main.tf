@@ -18,7 +18,7 @@ module "document_ai" {
   source = "../.."
 
   project_id             = var.project_id
-  location               = "us"
+  processor_location     = "us"
   processor_display_name = "example-processor"
   processor_type         = "OCR_PROCESSOR"
   kms_key_name           = ""

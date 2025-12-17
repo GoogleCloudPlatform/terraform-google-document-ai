@@ -40,8 +40,8 @@ Functional examples are included in the
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | kms\_key\_name | The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management. | `string` | `""` | no |
-| location | Document AI location, see https://cloud.google.com/document-ai/docs/regions | `string` | n/a | yes |
 | processor\_display\_name | The name of the document ai processor. Must be unique | `string` | n/a | yes |
+| processor\_location | Document AI location, see https://cloud.google.com/document-ai/docs/regions, possible values eu,us | `string` | n/a | yes |
 | processor\_type | Document AI processor type, refer: https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations.processorTypes#resource:-processortype | `string` | n/a | yes |
 | project\_id | The ID of the project in which the resource belongs. If it is not provided, the provider project is used. | `string` | n/a | yes |
 
