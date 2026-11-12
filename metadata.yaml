@@ -24,7 +24,7 @@ spec:
     source:
       repo: sso://ospo-internal/releasing/terraform-google-document-ai/terraform-google-document-ai
       sourceType: git
-    version: 0.0.1
+    version: 0.0.2
     actuationTool:
       flavor: Terraform
       version: ">= 1.3"
@@ -90,4 +90,4 @@ spec:
       - serviceusage.googleapis.com
     providerVersions:
       - source: hashicorp/google
-        version: ">= 3.53, < 7"
+        version: ">= 3.53, < 8"
