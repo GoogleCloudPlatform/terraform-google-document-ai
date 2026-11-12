@@ -21,7 +21,7 @@ Basic usage of this module is as follows:
 ```hcl
 module "document_ai" {
   source  = "terraform-google-modules/document-ai/google"
-  version = "~> 0.1"
+  version = "~> 0.0"
 
   project_id  = "<PROJECT ID>"
   location  = "<LOCATION>"
